@@ -4,11 +4,8 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
-import app from './redux/reducer'
-import {boundAddComment, boundRemoveComment, boundEditComment, boundUpComment, boundDownComment} from './redux/actions'
+import { store } from './store/store'
 
-const store = createStore(app);
 
 ReactDOM.render(
     <Provider store={store}>
@@ -17,8 +14,8 @@ ReactDOM.render(
     , document.getElementById('root')
 );
 
-store.boundAddComment('pierwszy komentarz');
-store.boundAddComment('drugi komentarz');
+// store.boundAddComment('pierwszy komentarz');
+// store.boundAddComment('drugi komentarz');
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
