@@ -11,7 +11,7 @@ export const reducer = combineReducers({
 export const store = createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    );
+);
 
 store.dispatch(addComment('testowy'));
 const state = store.getState();
@@ -20,4 +20,4 @@ store.dispatch(editComment(commentId, 'edytowany'));
 store.dispatch(downComment(commentId));
 store.dispatch(downComment(commentId));
 store.dispatch(upComment(commentId));
-store.dispatch(removeComment(commentId));
+// store.dispatch(removeComment(commentId));
