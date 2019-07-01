@@ -1,10 +1,14 @@
 
 import React from 'react';
-import Comment from './CommentContainer'
 
-const Comment = ({text, votes, id, upComment}) =>
- <li>
-    {text} <span>votes: {votes}</span> <button onClick={() => upComment(id)}>Thumb up</button>
- </li>;
+const Comment = ({text, votes, onThumbUp, onThumbDown, onEdit, onRemove}) => (
+   <li>
+      <p onClick={onEdit}>{text}</p>
+      {votes}
+      <button onClick={onThumbUp}>+</button>
+      <button onClick={onThumbDown}>-</button>
+      <button onClick={onRemove}>x</button>
+   </li>
+)
 
 export default Comment;
